@@ -68,7 +68,8 @@ class AddressBook(UserDict):
             if record.birthday:
                 birthday_this_year = record.birthday.value.replace(year=today.year)
                 if today <= birthday_this_year <= one_week_later:
-                    upcoming_birthdays.append((record.name.value, birthday_this_year.strftime("%d.%m.%Y")))
+                    upcoming_birthdays.append((record.name.value, 
+                                               birthday_this_year.strftime("%d.%m.%Y")))
         return upcoming_birthdays
 
 def input_error(func):
